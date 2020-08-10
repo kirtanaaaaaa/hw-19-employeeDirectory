@@ -1,0 +1,58 @@
+[
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "johndoe@email.com",
+      "role": "Sales Lead",
+      "department": "Sales"
+    },
+    {
+      "id": 2,
+      "name": "Mike Chan",
+      "email": "mikechan@email.com",
+      "role": "Lead Engineer",
+      "department": "Engineering"
+    },
+    {
+      "id": 3,
+      "name": "Ashley Rodriguez",
+      "email": "ashleyr@email.com",
+      "role": "Accountant",
+      "department": "Finance"
+    },
+    {
+      "id": 4,
+      "name": "Kevin Tupik",
+      "email": "kevint@email.com",
+      "role": "Judge",
+      "department": "Legal"
+    },
+    {
+      "id": 5,
+      "name": "Malia Brown",
+      "email": "malia@email.com",
+      "role": "Salesman",
+      "department": "Sales"
+    },
+    {
+      "id": 6,
+      "name": "Tom Allen",
+      "email": "tomallen@email.com",
+      "role": "Lawyer",
+      "department": "Legal"
+    },
+    {
+      "id": 7,
+      "name": "Sarah Lourd",
+      "email": "sarah@email.com",
+      "role": "Software engineer",
+      "department": "Engineering"
+    },
+    {
+      "id": 8,
+      "name": "Christian Eckenrode",
+      "email": "chris@email.com",
+      "role": "Banker",
+      "department": "Finance"
+    }
+  ]
