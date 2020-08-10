@@ -1,16 +1,47 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import EmployeeCard from './components/EmployeeCard/EmployeeCard/EmployeeCard';
 import Wrapper from './components/Wrapper/Wrapper';
 import Title from './components/Title/Title';
+import Filter from './components/Filter/Filter';
+import Sort from './components/Sort/Sort';
 import employees from "./employees.json"
 
+class Directory extends React.Component {
+  state = {
+    employees: employees,
+    employeeNames: [], 
+    selectedEmployee: ""
+  };
 
-function App() {
+  searchEmployees = () => {
+    let names = employees.map(employee => employee.name); 
+    this.setState({employeeNames: names});
+  };
+
+  handleInputChange = event => {
+    const value = event.target.value;
+    const name = event.target.name;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    this.searchEmployees(this.state.search);
+  };
+
+render(){
   return (
     <Wrapper>
       <Title> Employee Directory </Title>
+      <Filter></Filter>
+      <Sort
+        value={this.state.search}
+        handleInputChange={this.handleInputChange}
+        handleFormSubmit={this.handleFormSubmit}
+      />
       <EmployeeCard 
          name={employees[0].name}
          email={employees[0].email}
@@ -59,10 +90,8 @@ function App() {
          role={employees[7].role}
          department={employees[7].department}> 
       </EmployeeCard>
-     
     </Wrapper>
-   
   );
+ }
 }
-
-export default App;
+export default Directory;
